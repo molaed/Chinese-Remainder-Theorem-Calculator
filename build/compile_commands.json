@@ -1,0 +1,8 @@
+[
+{
+  "directory": "/Users/nathan/Documents/Projects/CRT/build",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++   -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk -o CMakeFiles/CRT.dir/test.cpp.o -c /Users/nathan/Documents/Projects/CRT/test.cpp",
+  "file": "/Users/nathan/Documents/Projects/CRT/test.cpp",
+  "output": "CMakeFiles/CRT.dir/test.cpp.o"
+}
+]
