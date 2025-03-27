@@ -9,6 +9,7 @@ int main(int argc, char **argv) {
         test_isPairwiseCoprime();
         test_modInverse();
 
+        std::cout << "All assertions passed.\n";
         return 1;
     }
 

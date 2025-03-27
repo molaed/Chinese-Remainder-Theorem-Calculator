@@ -1,4 +1,5 @@
 // Simple test suite for soundness check, feel free to add more tests
+// All asserts were first confirmed with an online calculator
 
 #include "CRT.h"
 
