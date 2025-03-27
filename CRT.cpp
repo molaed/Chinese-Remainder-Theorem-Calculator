@@ -1,13 +1,6 @@
-#include <cassert>
-#include <iostream>
-#include <utility>
-#include <vector>
+#include "CRT.h"
 
-#include "_CRT.h"
-
-
-// Implementation File
-void simulAssign(long long *a, long long *b, long long a_new, long long b_new) {
+static void simulAssign(long long *a, long long *b, long long a_new, long long b_new) {
     *a = a_new;
     *b = b_new;
 }

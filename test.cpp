@@ -1,4 +1,8 @@
-#include "CRT.cpp"
+#include <cassert>
+#include <iostream>
+#include <vector>
+
+#include "test.h"
 
 void test_LCM() {
     std::cout << "Test1: LCM(3, 3)\n";
@@ -59,36 +63,4 @@ void test_modInverse() {
 
     std::cout << "Test5: modInverse(134, 39391934)\n";
     std::cout << modInverse(133, 39391934) << ", ";
-}
-
-int main() {
-    std::cout << "Welcome to the Chinese Remainder Theorem Calcualtor\n";
-    int eqnCount;
-    long long answer = 0;
-    long long product = 1;
-
-    std::cout << "Please input the amount of equations in the system\n";
-    std::cin >> eqnCount;
-
-    std::vector<long long> remainders(eqnCount);
-    std::vector<long long> moduli(eqnCount);
-
-    std::cout << "Please input pairs of a_i, mod_i\n";
-    std::cout << "E.g., input \"1 3\" to add the eqn x≡1(mod 3)\n";
-    for (int i = 0; i < eqnCount; i++) {
-        std::cin >> remainders[i] >> moduli[i];
-        product *= moduli[i];
-    }
-
-    if (!isPairwiseCoprime(moduli)) {
-        std::cout << "Not all moduli are pairwise coprime!\n";
-        return 1;
-    }
-
-    for (int i = 0; i < eqnCount; i++) {
-        long long m_i = product / moduli[i];
-        answer += remainders[i] * m_i * modInverse(m_i, moduli[i]);
-    }
-
-    std::cout << "The answer is " << answer % product << " mod " << product;
 }
